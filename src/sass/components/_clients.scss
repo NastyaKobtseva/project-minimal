@@ -1,0 +1,133 @@
+@import "../utils/mixins";
+@import "../utils/placeholders";
+
+.clients {
+    background: #F7FAFF;
+    padding: 0 0 60px 0;
+    &__content-title {
+        color: #0A224A;
+        font-family: 'Roboto';
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 45px;
+        text-transform: uppercase;
+        padding: 60px 0 30px 0;
+        text-align: center;
+    }
+}
+.reviews {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+.dream {
+    width: 381px;
+    height: 300px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: bg-color 0.9s linear, transform 0.3s linear;
+    &:hover {
+        background-color: rgb(238, 238, 238);
+        transform: scale(0.9);
+    }
+    &:hover::before {
+        content: '';
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background-image: conic-gradient(transparent, transparent, transparent, #002ed4);
+        animation: rotate 2s linear infinite;
+    }
+    &:hover:after {
+        content: '';
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background-image: conic-gradient(transparent, transparent, transparent, #4400b0);
+        animation: rotate 2s linear infinite;
+        animation-delay: -1s;
+    }
+    &__content {
+        position: absolute;
+        inset: 5px;
+        z-index: 2;
+        border-radius: 8px;
+        transition: bg-color 0.9s linear;
+        padding: 0 0 0 32px;
+        &:hover {
+            background-color: rgb(238, 238, 238);
+        }
+    }
+    &__text {
+        color: #0A224A;
+        font-family: 'Roboto';
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.alexandra {
+    @include flex-align ($flex:flex, $items:center);
+    gap: 14px;
+    padding: 26px 0 20px 0;
+    &__title {
+        color: #0A224A;
+        font-family: 'Roboto';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 45px;
+        text-transform: uppercase;
+    }
+    &__subtitle {
+        color: #0A224A;
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reviews {
+        gap: 16px;
+    }
+    .dream__bg-emily {
+        display: none;
+    }
+    .dream {
+        width: 314px;
+        height: 330px;
+    }
+    .dream__text {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 376px) {
+    .dream__invisible {
+        display: none;
+    }
+    .dream__text {
+        font-size: 16px;
+    }
+    .dream__text {
+        font-size: 13px;
+    }
+}

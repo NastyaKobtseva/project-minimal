@@ -1,0 +1,61 @@
+@import "../utils/mixins";
+@import "../utils/placeholders";
+
+.product {
+    &__content-title {
+        color: #0A224A;
+        font-family: 'Roboto';
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 45px;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0 0 30px 0;
+    }
+}
+.sleek {
+    display: flex;
+    padding: 0 0 100px 0;
+    gap: 24px;
+    justify-content: center;
+    &__content .sleek__text {
+        transition: transform 0.7s linear, color 0.9s linear;
+    }
+    &__content .sleek__photo {
+        transition: transform 0.7s linear;
+    }
+    &__content:hover .sleek__text {
+        transform: translate(3.6px, -50px);
+        color: #e1e1e3;
+    }
+    &__content:hover .sleek__photo {
+        filter: brightness(0.7);
+    }
+    &__photo {
+        width: 283px;
+        height: 271px;
+    }
+    &__text {
+        color: #0A224A;
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        padding: 15px 0 0 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .sleek__our {
+        display: none;
+    }
+}
+
+@media (max-width: 376px) {
+    .sleek__invisible {
+        display: none;
+    }
+}

@@ -1,0 +1,426 @@
+@import "../utils/mixins";
+@import "../utils/placeholders";
+
+.footer {
+    background: #0A224A;
+    padding: 48px 10px 36px 10px;
+    &__mobile {
+        display: none;
+    }
+}
+.rules {
+    display: flex;
+    justify-content: center;
+    gap: 136px;
+    &__content {
+        display: flex;
+        gap: 70px;
+    }
+}
+.service {
+    &__address {
+        padding: 15px 0 0 0;
+    }
+    &__address-daily {
+        padding: 24px 0 0 0;
+        @extend %furniture;
+        transition: transform 0.3s linear, color 0.3s linear;
+        &:hover {
+            transform: scale(1.1) translateX(20px);
+            color: rgb(255, 162, 0);
+        }
+    }
+    &__address-link {
+        @extend %furniture;
+        transition: color 0.3s linear;
+        &:hover {
+            color: rgb(255, 162, 0);
+        }
+    }
+}
+.menu {
+    &__list {
+        display: flex;
+        gap: 30px;
+    }
+    &__item {
+        transition: transform 0.3s linear;
+        &:hover {
+            transform: scale(1.3);
+        }
+    }
+    &__link {
+        color: #FFF;
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        transition: color 0.3s linear;
+        &:hover {
+            color: rgb(255, 162, 0);
+        }
+    }
+}
+.furniture {
+    display: flex;
+    gap: 82px;
+    padding: 32px 0 0 0;
+    &__numbers {
+        display: flex;
+        flex-direction: column;
+    }
+    &__numbers-link {
+        padding: 0 0 24px 0;
+        @extend %furniture;
+        transition: transform 0.3s linear, color 0.3s linear;
+        &:hover {
+            color: rgb(255, 162, 0);
+            transform: scale(1.1) translateX(20px);
+        }
+    }
+    &__number-link {
+        @extend %furniture;
+        transition: transform 0.3s linear, color 0.3s linear;
+        &:hover {
+            color: rgb(255, 162, 0);
+            transform: scale(1.1) translateX(20px);
+        }
+    }
+    &__email-link {
+        @extend %furniture;
+        transition: transform 0.3s linear, color 0.3s linear;
+        &:hover {
+            color: rgb(255, 162, 0);
+            transform: scale(1.1) translateX(20px);
+        }
+    }
+}
+.social {
+    display: flex;
+    gap: 30px;
+    &__face {
+        fill: white;
+        transition: transform 0.3s linear, fill 0.3s linear;
+        &:hover {
+            transform: scale(1.2);
+            fill: rgb(22, 30, 255);
+        }
+    }
+    &__insta {
+        fill: white;
+        transition: transform 0.3s linear, fill 0.3s linear;
+        &:hover {
+            transform: scale(1.2);
+            fill: rgb(255, 65, 96);
+        }
+    }
+    &__youtube {
+        fill: white;
+        transition: transform 0.3s linear, fill 0.3s linear;
+        &:hover {
+            transform: scale(1.2);
+            fill: red;
+        }
+    }
+}
+.privacy {
+    text-align: center;
+    opacity: 0.6;
+    color: #FFF;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1.188px;
+    padding: 35px 0 0 0;
+    &__link {
+        text-decoration-line: underline;
+        color: #FFF;
+    }
+}
+.obolonsky {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 48px 30px 36px 30px;
+    }
+    .rules {
+        gap: 50px;
+    }
+    .rules__content {
+        display: none;
+    }
+    .obolonsky {
+        display: flex;
+        gap: 80px;
+    }
+    .using__address {
+        padding: 0 0 15px 0;
+    }
+    .using__address-daily {
+        padding: 24px 0 0 0;
+        color: #FFF;
+        font-family: 'Roboto';
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.19px;
+        transition: transform 0.3s linear, color 0.3s linear;
+        &:hover {
+            transform: scale(1.1) translateX(20px);
+            color: rgb(255, 162, 0);
+        }
+    }
+    .using__address-link {
+        color: #FFF;
+        font-family: 'Roboto';
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.19px;
+        transition: transform 0.3s linear, color 0.3s linear;
+        &:hover {
+            transform: scale(1.1) translateX(20px);
+            color: rgb(255, 162, 0);
+        }
+    }
+    .using__furniture {
+        padding: 64px 0 0 0;
+    }
+    .using__furniture-numbers {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 24px 0;
+    }
+    .using__furniture-link {
+        color: #FFF;
+        font-family: 'Roboto';
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.19px;
+        transition: transform 0.3s linear, color 0.3s linear;
+        padding: 0 0 24px 0;
+        &:hover {
+            transform: scale(1.1) translateX(20px);
+            color: rgb(255, 162, 0);
+        }
+    }
+    .using__furniture-links {
+        color: #FFF;
+        font-family: 'Roboto';
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.19px;
+        transition: transform 0.3s linear, color 0.3s linear;
+        &:hover {
+            transform: scale(1.1) translateX(20px);
+            color: rgb(255, 162, 0);
+        }
+    }
+    .using__furniture-email {
+        color:#FFF;
+        font-family: 'Roboto';
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.19px;
+    }
+    .using__furniture-email-text {
+        transition: transform 0.3s linear, color 0.3s linear;
+        &:hover {
+            transform: scale(1.1) translateX(20px);
+            color: rgb(255, 162, 0);
+        }
+    }
+    .agree__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .agree__item {
+        transition: transform 0.3s linear;
+        &:hover {
+            transform: scale(1.3);
+            color: rgb(255, 162, 0);
+        }
+    }
+    .agree__link {
+        color:#FFF;
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        transition: color 0.3s linear;
+        &:hover {
+            color: rgb(255, 162, 0);
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    .footer {
+        padding: 48px 16px 36px 16px;
+    }
+    .footer__content {
+        display: none;
+    }
+    .footer__mobile {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer__mobile-content {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    .prospect__menu-list {
+        padding: 42px 0 36px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .prospect__menu-item {
+        transition: transform 0.3s linear;
+        &:hover {
+            transform: scale(1.3) translateX(30px);
+        }
+    }
+    .prospect__menu-link {
+        color: #FFF;
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        transition: color 0.3s linear;
+        &:hover {
+            color: rgb(255, 162, 0);
+        }
+    }
+    .prospect__address {
+        padding: 0 0 35px 0;
+    }
+    .prospect__address-kyiv {
+        padding: 0 0 8px 0;
+        transition: color 0.3s linear, transform 0.3s linear;
+        &:hover {
+            transform: scale(1.2) translateX(20px);
+        }
+    }
+    .prospect__address-link {
+        color: #FFF;
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.16px;
+        transition: color 0.3s linear;
+        &:hover {
+            color: rgb(255, 162, 0);
+        }
+    }
+    .prospect__address-daily {
+        color: #FFF;
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.16px;
+        transition: color 0.3s linear, transform 0.3s linear;
+        &:hover {
+            color: rgb(255, 162, 0);
+            transform: scale(1.2) translateX(20px);
+        }
+    }
+    .prospect__numbers {
+        display: flex;
+        flex-direction: column;
+    }
+    .prospect__numbers-link {
+        padding: 0 0 8px 0;
+        color: #FFF;
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.16px;
+        transition: transform 0.3s linear, color 0.3s linear;
+        &:hover {
+            color: rgb(255, 162, 0);
+            transform: scale(1.2) translateX(20px);
+        }
+    }
+    .prospect__numbers-phone {
+        color: #FFF;
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.16px;
+        transition: transform 0.3s linear, color 0.3s linear;
+        &:hover {
+            color: rgb(255, 162, 0);
+            transform: scale(1.2) translateX(20px);
+        }
+    }
+    .social__networks {
+        display: flex;
+        gap: 16px;
+    }
+    .social__networks-face {
+        fill: white;
+        transition: transform 0.3s linear, fill 0.3s linear;
+        &:hover {
+            transform: scale(1.4) translateY(-5px);
+            fill: rgb(22, 30, 255);
+        }
+    }
+    .social__networks-insta {
+        fill: white;
+        transition: transform 0.3s linear, fill 0.3s linear;
+        &:hover {
+            transform: scale(1.4) translateY(-5px);
+            fill: rgb(255, 65, 96);
+        }
+    }
+    .social__networks-youtube {
+        fill: white;
+        transition: transform 0.3s linear, fill 0.3s linear;
+        &:hover {
+            transform: scale(1.4) translateY(-5px);
+            fill: red;
+        }
+    }
+    .policy {
+        text-align: center;
+        padding: 64px 0 0 0;
+        color: #FFF;
+        font-family: 'Roboto';
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 1.188px;
+        opacity: 0.6;
+    }
+    .policy__link {
+        text-decoration-line: underline;
+        color: #FFF;
+    }
+}

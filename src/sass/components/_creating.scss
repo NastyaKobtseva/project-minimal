@@ -1,0 +1,335 @@
+@import "../utils/mixins";
+@import "../utils/placeholders";
+
+.handmade {
+    @include flex-center($display:flex, $j-content:center, $align:center);
+    gap: 65px;
+    padding: 0 0 100px 0;
+    &__photo {
+        width: 536px;
+        height: 540px;
+    }
+}
+.discover {
+    background: #F7FAFF;
+    padding: 0 45px 0 45px;
+    &__us {
+        @include flex-align ($flex:flex, $items:center);
+        gap: 20px;
+        padding: 36px 0 30px 0;
+    }
+    &__us-text {
+        color: #0A224A;
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+    &__title {
+        color: #0A224A;
+        font-family: 'Roboto';
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 45px;
+        text-transform: uppercase;
+        padding: 0 0 30px 0;
+    }
+    &__subtitle {
+        color: #0A224A;
+        font-family: 'Roboto';
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        padding: 0 0 30px 0;
+    }
+}
+
+.exprience {
+    display: flex;
+    gap: 56px;
+    justify-content: center;
+    &__content {
+        text-align: center;
+        transition: transform 0.3s linear;
+        &:hover {
+            transform: scale(0.93);
+        }
+    }
+    &__title {
+        color: #0A224A;
+        font-family: 'Roboto';
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 75px;
+        text-transform: uppercase;
+        padding: 0 0 19px 0;
+    }
+    &__subtitle {
+        color: #0A224A;
+        font-family: 'Roboto';
+        font-size: 14.9px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        padding: 0 0 34px 0;
+    }
+}
+
+.chairs {
+    flex-direction: column;
+    @include flex-center ($display:flex, $j-content:center, $align:center);
+    padding: 0 0 100px 0;
+    &__line {
+        width: 1096px;
+        height: 1px;
+    }
+    &__position {
+        gap: 804px;
+        padding: 30px 0 30px 0;
+        @include flex-align ($flex:flex, $items:center);
+        &:hover {
+            .chairs__content-svg {
+                opacity: 1;
+            }
+        }
+        & .chairs__content {
+            transition: transform 0.3s linear;
+        }
+        &:hover .chairs__content {
+            transform: translateX(50px);
+        }
+        & .chairs__text {
+            transition: transform 0.3s linear;
+        }
+        &:hover .chairs__text {
+            transform: scale(1.35) translateX(-20px);
+        }
+    }
+    &__position-tab {
+        gap: 804px;
+        padding: 30px 0 30px 0;
+        @include flex-align ($flex:flex, $items:center);
+        &:hover {
+            .chairs__content-svg {
+                opacity: 1;
+            }
+        }
+        & .chairs__content {
+            transition: transform 0.3s linear;
+        }
+        &:hover .chairs__content {
+            transform: translateX(50px);
+        }
+        & .chairs__text {
+            transition: transform 0.3s linear;
+        }
+        &:hover .chairs__text {
+            transform: scale(1.35) translateX(-20px);
+        }
+    }
+    &__position-dres {
+        @include flex-align ($flex:flex, $items:center);
+        gap: 761px;
+        padding: 30px 0 30px 0;
+        &:hover {
+            .chairs__content-svg {
+                opacity: 1;
+            }
+        }
+        & .chairs__content {
+            transition: transform 0.3s linear;
+        }
+        &:hover .chairs__content {
+            transform: translateX(50px);
+        }
+        & .chairs__text {
+            transition: transform 0.3s linear;
+        }
+        &:hover .chairs__text {
+            transform: scale(1.35) translateX(-20px);
+        }
+    }
+    &__position-sofa {
+        gap: 815px;
+        padding: 30px 0 30px 0;
+        @include flex-align ($flex:flex, $items:center);
+        &:hover {
+            .chairs__content-svg {
+                opacity: 1;
+            }
+        }
+        & .chairs__content {
+            transition: transform 0.3s linear;
+        }
+        &:hover .chairs__content {
+            transform: translateX(50px);
+        }
+        & .chairs__text {
+            transition: transform 0.3s linear;
+        }
+        &:hover .chairs__text {
+            transform: scale(1.35) translateX(-20px);
+        }
+    }
+    &__content {
+        @include flex-align ($flex:flex, $items:center);
+        gap: 30px;
+        color: #0A224A;
+        font-family: 'Roboto';
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 45px;
+        text-transform: uppercase;
+        position: relative; 
+        z-index: 1; 
+    }
+    &__text {
+        color: #0A224A;
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27px;
+    }
+
+    &__content-svg {
+        opacity: 0;
+        transition: opacity 0.3s linear;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateX(-70px);
+        z-index: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .discover {
+        width: 704px;
+    }
+    .handmade {
+        flex-wrap: wrap;
+    }
+    .chairs {
+        &__line {
+            width: 690px;
+            height: 1px;
+        }
+        &__position {
+            gap: 400px;
+        }
+        &__position-tab {
+            gap: 401px;
+        }
+        &__position-dres {
+            gap: 366px;
+        }
+        &__position-sofa {
+            gap: 429px;
+        }
+    }
+    .handmade__photo {
+        width: 704px;
+        height: 540px;
+    }
+}
+
+@media (max-width: 376px) {
+    .discover {
+        &__title {
+            font-size: 28px;
+        }
+        &__subtitle {
+            font-size: 16px;
+        }
+    }
+    .exprience {
+        flex-direction: column;
+        padding: 0 0 64px 0;
+        &__content {
+            text-align: center;
+        }
+        &__title {
+            color: #0A224A;
+            font-family: 'Roboto';
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 75px;
+            text-transform: uppercase;
+            padding: 0 0 19px 0;
+        }
+        &__subtitle {
+            color: #0A224A;
+            font-family: 'Roboto';
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 27px;
+            padding: 0 0 34px 0;
+        }
+    }
+    .handmade {
+        gap: 0;
+    }
+    .handmade__photo {
+        width: 345px;
+    }
+    .chairs {
+        flex-direction: column;
+        @include flex-center ($display:flex, $j-content:flex, $align:center);
+        padding: 0 0 100px 0;
+        &__line {
+            width: 343px;
+            height: 1px;
+        }
+        &__position {
+            gap: 106px;
+        }
+        &__position-tab {
+            gap: 106px;
+        }
+        &__position-dres {
+            gap: 69px;
+        }
+        &__position-sofa {
+            gap: 106px;
+        }
+        &__content {
+            @include flex-align ($flex:flex, $items:center);
+            gap: 16px;
+            color: #0A224A;
+            font-family: 'Roboto';
+            font-size: 23px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 45px;
+            text-transform: uppercase;
+        }
+        &__text {
+            color: #0A224A;
+            font-family: 'Roboto';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27px;
+        }
+        &__position:hover .chairs__text {
+            transform: scale(1.2) translateX(-9px);
+        }
+        &__position-tab:hover .chairs__text {
+            transform: scale(1.2) translateX(-9px);
+        }
+        &__position-dres:hover .chairs__text {
+            transform: scale(1.2) translateX(-9px);
+        }
+        &__position-sofa:hover .chairs__text {
+            transform: scale(1.2) translateX(-9px);
+        }
+    }
+}

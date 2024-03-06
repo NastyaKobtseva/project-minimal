@@ -1,0 +1,183 @@
+@import "../utils/mixins";
+@import "../utils/placeholders";
+
+.bestsellers {
+    &__content-title {
+        color: #0A224A;
+        font-family: 'Roboto';
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 45px;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0 0 30px 0;
+    }
+}
+.gallery {
+    gap: 24px;
+    @include flex-center ($display:flex, $j-content:center, $align:center);
+    padding: 0 0 100px 0;
+}
+.bed .bed__photo {
+    transition: filter 0.3s linear;
+}
+.bed .bed__texts {
+    transition: transform 0.5s linear;
+}
+.bed .bed__text, .bed .bed__price {
+    transition: color 0.9s linear;
+}
+.bed:hover .bed__photo {
+    filter: brightness(0.7);
+}
+.bed:hover .bed__texts {
+    transform: translate(10px, -90px);
+}
+.bed:hover .bed__text, .bed:hover .bed__price {
+    color: white;
+}
+.bed__texts {
+    padding: 15px 0 0 0;
+}
+.bed__text {
+    font-weight: 400;
+    padding: 0 0 10px 0;
+    @extend %bed;
+}
+.bed__price {
+    font-weight: 700;
+    @extend %bed;
+}
+.hospitable {
+    display: flex;
+    gap: 30px;
+    padding: 0 0 30px 0;
+}
+.lounge .lounge__photo {
+    transition: filter 0.3s linear;
+}
+.lounge .lounge__texts {
+    transition: transform 0.5s linear;
+}
+.lounge .lounge__text {
+    transition: color 0.8s linear;
+}
+.lounge .lounge__price {
+    transition: color 0.8s linear;
+}
+.lounge:hover .lounge__photo {
+    filter: brightness(0.7);
+}
+.lounge:hover .lounge__texts {
+    transform: translate(10px, -90px);
+}
+.lounge:hover .lounge__text {
+    color: white;
+}
+.lounge:hover .lounge__price {
+    color: white;
+}
+.accent .accent__photo {
+    transition: filter 0.3s linear;
+}
+.accent .accent__texts {
+    transition: transform 0.5s linear;
+}
+.accent .accent__text {
+    transition: color 0.8s linear;
+}
+.accent .accent__price {
+    transition: color 0.8s linear;
+}
+.accent:hover .accent__photo {
+    filter: brightness(0.7);
+}
+.accent:hover .accent__texts {
+    transform: translate(10px, -90px);
+}
+.accent:hover .accent__text {
+    color: white;
+}
+.accent:hover .accent__price {
+    color: white;
+}
+.bedroom {
+    display: flex;
+    gap: 30px;
+}
+.stand .stand__photo {
+    transition: filter 0.3s linear;
+}
+.stand .stand__texts {
+    transition: transform 0.5s linear;
+}
+.stand .stand__text {
+    transition: color 0.8s linear;
+}
+.stand .stand__price {
+    transition: color 0.8s linear;
+} 
+.stand:hover .stand__photo {
+    filter: brightness(0.7);
+}
+.stand:hover .stand__texts {
+    transform: translate(10px, -90px);
+}
+.stand:hover .stand__text {
+    color: white;
+}
+.stand:hover .stand__price {
+    color: white;
+} 
+.sofa .photo__sofa {
+    transition: filter 0.3s linear;
+}
+.sofa .sofa__texts {
+    transition: transform 0.5s linear;
+}
+.sofa .sofa__text {
+    transition: color 0.8s linear;
+}
+.sofa .sofa__price {
+    transition: color 0.8s linear;
+}
+.sofa:hover .photo__sofa {
+    filter: brightness(0.7);
+}
+.sofa:hover .sofa__texts {
+    transform: translate(10px, -90px);
+}
+.sofa:hover .sofa__text {
+    color: white;
+}
+.sofa:hover .sofa__price {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 376px) {
+    .bed__photo {
+        width: 343px;
+        height: 250px;
+    }
+    .hospitable {
+        flex-direction: column;
+    }
+    .lounge__photo {
+        width: 343px;
+        height: 250px;
+    }
+    .accent__photo {
+        width: 343px;
+        height: 250px;
+    }
+    .bedroom__content {
+        display: none;
+    }
+}

@@ -1,0 +1,257 @@
+@import "../utils/mixins";
+@import "../utils/placeholders";
+
+.newsletter {
+    padding: 100px 0 86px 0;
+    &__content {
+        gap: 100px;
+        @include flex-center ($display:flex, $j-content:center, $align:center);
+    }
+}
+.information {
+    &__title {
+        color: #0A224A;
+        font-family: 'Roboto';
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 45px;
+        text-transform: uppercase;
+        padding: 0 0 31px 0;
+    }
+    &__subtitle {
+        color: #0A224A;
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        padding: 0 0 21px 0;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+    &__name {
+        margin: 0 0 21px 0;
+        @include flex-align ($flex:flex, $items:flex-start);
+        width: 536px;
+        height: 51.768px;
+        padding: 11px 20px;
+        gap: 8px;
+        flex-shrink: 0;
+        border: 1px solid #0A224A;
+        color: #D9D9D9;
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        transition: transform 0.3s linear, border 0.3s linear;
+        &::placeholder {
+            color: #D9D9D9;
+        }
+        &:hover {
+            transform: translateY(-5px);
+        }
+        &:focus, &:focus-visible {
+            border: none;
+            outline: 2px solid #0A224A;
+        }
+    }
+    &__email {
+        margin: 0 0 22px 0;
+        @include flex-align ($flex:flex, $items:flex-start);
+        width: 536px;
+        height: 51.768px;
+        padding: 11px 20px;
+        gap: 8px;
+        flex-shrink: 0;
+        border: 1px solid #0A224A;
+        color: #D9D9D9;
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        transition: transform 0.3s linear, border 0.3s linear;
+        &::placeholder {
+            color: #D9D9D9;
+        }
+        &:hover {
+            transform: translateY(-5px);
+        }
+        &:focus, &:focus-visible {
+            border: none;
+            outline: 2px solid #0A224A;
+        }
+    }
+    &__button-link {
+        padding: 17px 95px;
+        background-color:#0A224A;
+        color: #FFF;
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        cursor: pointer;
+        border: none;
+        position: relative;
+        transition: transform 0.3s linear;
+        &:hover {
+            transform: scale(1.1);
+            background-color: black;
+            &::before {
+                opacity: 1;
+            }
+        }
+        &::before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 7px);
+            height: calc(100% + 7px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+        }
+        &::after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            transition: background-color 0.3s ease;
+        }
+    }
+}
+
+.contract {
+    @include flex-align ($flex:flex, $items:center);
+    padding: 0 0 31px 0;
+    margin: 0 0 20px 0;
+    &__check {
+        display: inline-block;
+        position: relative;
+        padding: 0 0 0 35px;
+        cursor: pointer;
+        font-size: 16px;
+        top: -10px;
+        left: 3px;
+    }
+    &__check input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    &__check input:checked ~ .checkmark {
+        background-color: #0A224A;
+        border-color: #0A224A;
+      }
+      
+    &__check input:checked ~ .checkmark::after {
+        display: block;
+    }
+    &__check input:focus ~ .checkmark {
+        box-shadow: 0 0 1px #0A224A;
+    }
+    &__text {
+        color: #7A7A7A;
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+    }
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 1px solid #212121;
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 8.5px;
+        top: 2px;
+        width: 5px;
+        height: 13px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+}
+
+
+@keyframes glowing {
+    0% { 
+        background-position: 0 0; 
+    }
+    50% { 
+        background-position: 400% 0; 
+    }
+    100% { 
+        background-position: 0 0; 
+    }
+}
+
+@media (max-width: 768px) {
+    .newsletter__content {
+        flex-wrap: wrap;
+    }
+    .information__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .newsletter__content-photo {
+        width: 630px;
+        height: 413px;
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: 376px) {
+    .information__title {
+        text-align: center;
+    }
+    .information__subtitle {
+        font-size: 16px;
+    }
+    .information__name {
+        width: 343px;
+        height: 50px;
+        padding: 11px 20px;
+        @include flex-align ($flex:flex, $items:center);
+        gap: 8px;
+        flex-shrink: 0;
+    }
+    .information__email {
+        width: 343px;
+        height: 50px;
+        padding: 11px 20px;
+        @include flex-align ($flex:flex, $items:center);
+        gap: 8px;
+        flex-shrink: 0;
+    }
+    .contract__text {
+        font-size: 16px;
+    }
+    .newsletter__content-photo {
+        width: 343px;
+        height: 300px;
+    }
+}
