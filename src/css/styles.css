@@ -1246,6 +1246,19 @@ nav {
   border: none;
   outline: 2px solid #0A224A;
 }
+.information__name.focused::-moz-placeholder {
+  transform: translateY(-15px);
+  font-size: 14px;
+  color: #D9D9D9;
+  -moz-transition: transform 0.3s, font-size 0.3s, color 0.3s;
+  transition: transform 0.3s, font-size 0.3s, color 0.3s;
+}
+.information__name.focused::placeholder {
+  transform: translateY(-15px);
+  font-size: 14px;
+  color: #D9D9D9;
+  transition: transform 0.3s, font-size 0.3s, color 0.3s;
+}
 .information__email {
   margin: 0 0 22px 0;
   display: flex;
@@ -1276,6 +1289,19 @@ nav {
 .information__email:focus, .information__email:focus-visible {
   border: none;
   outline: 2px solid #0A224A;
+}
+.information__email.focused::-moz-placeholder {
+  transform: translateY(-15px);
+  font-size: 14px;
+  color: #D9D9D9;
+  -moz-transition: transform 0.3s, font-size 0.3s, color 0.3s;
+  transition: transform 0.3s, font-size 0.3s, color 0.3s;
+}
+.information__email.focused::placeholder {
+  transform: translateY(-15px);
+  font-size: 14px;
+  color: #D9D9D9;
+  transition: transform 0.3s, font-size 0.3s, color 0.3s;
 }
 .information__button-link {
   padding: 17px 95px;

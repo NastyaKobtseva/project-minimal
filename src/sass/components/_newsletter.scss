@@ -58,6 +58,12 @@
             border: none;
             outline: 2px solid #0A224A;
         }
+        &.focused::placeholder {
+            transform: translateY(-15px);
+            font-size: 14px;
+            color: #D9D9D9;
+            transition: transform 0.3s, font-size 0.3s, color 0.3s;
+        }
     }
     &__email {
         margin: 0 0 22px 0;
@@ -84,6 +90,12 @@
         &:focus, &:focus-visible {
             border: none;
             outline: 2px solid #0A224A;
+        }
+        &.focused::placeholder {
+            transform: translateY(-15px);
+            font-size: 14px;
+            color: #D9D9D9;
+            transition: transform 0.3s, font-size 0.3s, color 0.3s;
         }
     }
     &__button-link {
