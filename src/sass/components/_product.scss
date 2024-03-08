@@ -1,9 +1,10 @@
 @import "../utils/mixins";
 @import "../utils/placeholders";
+@import "../utils/variable";                                                                                                                                                                                                    
 
 .product {
     &__content-title {
-        color: #0A224A;
+        color: $header-dark-blue-color;
         font-family: 'Roboto';
         font-size: 32px;
         font-style: normal;
@@ -27,7 +28,7 @@
     }
     &__content:hover .sleek__text {
         transform: translate(3.6px, -50px);
-        color: #e1e1e3;
+        color: $product-light-gray;
     }
     &__content:hover .sleek__photo {
         filter: brightness(0.7);
@@ -37,7 +38,7 @@
         height: 271px;
     }
     &__text {
-        color: #0A224A;
+        color: $header-dark-blue-color;
         font-family: 'Roboto';
         font-size: 18px;
         font-style: normal;

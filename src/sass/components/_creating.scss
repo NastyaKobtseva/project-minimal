@@ -1,5 +1,6 @@
 @import "../utils/mixins";
 @import "../utils/placeholders";
+@import "../utils/variable";
 
 .handmade {
     @include flex-center($display:flex, $j-content:center, $align:center);
@@ -11,7 +12,7 @@
     }
 }
 .discover {
-    background: #F7FAFF;
+    background: $header-white-grey-color;
     padding: 0 45px 0 45px;
     &__us {
         @include flex-align ($flex:flex, $items:center);
@@ -19,7 +20,7 @@
         padding: 36px 0 30px 0;
     }
     &__us-text {
-        color: #0A224A;
+        color: $header-dark-blue-color;
         font-family: 'Roboto';
         font-size: 16px;
         font-style: normal;
@@ -27,7 +28,7 @@
         line-height: 24px;
     }
     &__title {
-        color: #0A224A;
+        color: $header-dark-blue-color;
         font-family: 'Roboto';
         font-size: 26px;
         font-style: normal;
@@ -37,7 +38,7 @@
         padding: 0 0 30px 0;
     }
     &__subtitle {
-        color: #0A224A;
+        color: $header-dark-blue-color;
         font-family: 'Roboto';
         font-size: 15px;
         font-style: normal;
@@ -59,7 +60,7 @@
         }
     }
     &__title {
-        color: #0A224A;
+        color: $header-dark-blue-color;
         font-family: 'Roboto';
         font-size: 45px;
         font-style: normal;
@@ -69,7 +70,7 @@
         padding: 0 0 19px 0;
     }
     &__subtitle {
-        color: #0A224A;
+        color: $header-dark-blue-color;
         font-family: 'Roboto';
         font-size: 14.9px;
         font-style: normal;
@@ -178,7 +179,7 @@
     &__content {
         @include flex-align ($flex:flex, $items:center);
         gap: 30px;
-        color: #0A224A;
+        color: $header-dark-blue-color;
         font-family: 'Roboto';
         font-size: 32px;
         font-style: normal;
@@ -189,7 +190,7 @@
         z-index: 1; 
     }
     &__text {
-        color: #0A224A;
+        color: $header-dark-blue-color;
         font-family: 'Roboto';
         font-size: 18px;
         font-style: normal;
@@ -255,7 +256,7 @@
             text-align: center;
         }
         &__title {
-            color: #0A224A;
+            color: $header-dark-blue-color;
             font-family: 'Roboto';
             font-size: 50px;
             font-style: normal;
@@ -265,7 +266,7 @@
             padding: 0 0 19px 0;
         }
         &__subtitle {
-            color: #0A224A;
+            color: $header-dark-blue-color;
             font-family: 'Roboto';
             font-size: 18px;
             font-style: normal;
@@ -303,7 +304,7 @@
         &__content {
             @include flex-align ($flex:flex, $items:center);
             gap: 16px;
-            color: #0A224A;
+            color: $header-dark-blue-color;
             font-family: 'Roboto';
             font-size: 23px;
             font-style: normal;
@@ -312,7 +313,7 @@
             text-transform: uppercase;
         }
         &__text {
-            color: #0A224A;
+            color: $header-dark-blue-color;
             font-family: 'Roboto';
             font-size: 16px;
             font-style: normal;

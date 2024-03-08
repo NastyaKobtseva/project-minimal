@@ -1,9 +1,10 @@
 @import "../utils/mixins";
 @import "../utils/placeholders";
+@import "../utils/variable"; 
 
 .bestsellers {
     &__content-title {
-        color: #0A224A;
+        color: $header-dark-blue-color;
         font-family: 'Roboto';
         font-size: 32px;
         font-style: normal;
@@ -35,7 +36,7 @@
     transform: translate(10px, -90px);
 }
 .bed:hover .bed__text, .bed:hover .bed__price {
-    color: white;
+    color: $header-white-color;
 }
 .bed__texts {
     padding: 15px 0 0 0;
@@ -73,10 +74,10 @@
     transform: translate(10px, -90px);
 }
 .lounge:hover .lounge__text {
-    color: white;
+    color: $header-white-color;
 }
 .lounge:hover .lounge__price {
-    color: white;
+    color: $header-white-color;
 }
 .accent .accent__photo {
     transition: filter 0.3s linear;
@@ -97,10 +98,10 @@
     transform: translate(10px, -90px);
 }
 .accent:hover .accent__text {
-    color: white;
+    color: $header-white-color;
 }
 .accent:hover .accent__price {
-    color: white;
+    color: $header-white-color;
 }
 .bedroom {
     display: flex;
@@ -125,10 +126,10 @@
     transform: translate(10px, -90px);
 }
 .stand:hover .stand__text {
-    color: white;
+    color: $header-white-color;
 }
 .stand:hover .stand__price {
-    color: white;
+    color: $header-white-color;
 } 
 .sofa .photo__sofa {
     transition: filter 0.3s linear;
@@ -149,10 +150,10 @@
     transform: translate(10px, -90px);
 }
 .sofa:hover .sofa__text {
-    color: white;
+    color: $header-white-color;
 }
 .sofa:hover .sofa__price {
-    color: white;
+    color: $header-white-color;
 }
 
 @media (max-width: 768px) {

@@ -1,11 +1,12 @@
 @import "../utils/mixins";
 @import "../utils/placeholders";
+@import "../utils/variable"; 
 
 .clients {
-    background: #F7FAFF;
+    background: $header-white-grey-color;
     padding: 0 0 60px 0;
     &__content-title {
-        color: #0A224A;
+        color: $header-dark-blue-color;
         font-family: 'Roboto';
         font-size: 32px;
         font-style: normal;
@@ -17,8 +18,7 @@
     }
 }
 .reviews {
-    display: flex;
-    justify-content: center;
+    @include center ($dis-flex:flex, $j-center:center);
     gap: 24px;
 }
 .dream {
@@ -26,13 +26,13 @@
     height: 300px;
     flex-shrink: 0;
     border-radius: 8px;
-    background-color: white;
+    background-color: $header-white-color;
     cursor: pointer;
     overflow: hidden;
     position: relative;
     transition: bg-color 0.9s linear, transform 0.3s linear;
     &:hover {
-        background-color: rgb(238, 238, 238);
+        background-color: $client-light-gray-color;
         transform: scale(0.9);
     }
     &:hover::before {
@@ -40,7 +40,7 @@
         position: absolute;
         width: 500px;
         height: 500px;
-        background-image: conic-gradient(transparent, transparent, transparent, #002ed4);
+        background-image: conic-gradient(transparent, transparent, transparent, $client-blue-color);
         animation: rotate 2s linear infinite;
     }
     &:hover:after {
@@ -48,7 +48,7 @@
         position: absolute;
         width: 500px;
         height: 500px;
-        background-image: conic-gradient(transparent, transparent, transparent, #4400b0);
+        background-image: conic-gradient(transparent, transparent, transparent, $client-purple-color);
         animation: rotate 2s linear infinite;
         animation-delay: -1s;
     }
@@ -60,11 +60,11 @@
         transition: bg-color 0.9s linear;
         padding: 0 0 0 32px;
         &:hover {
-            background-color: rgb(238, 238, 238);
+            background-color: $client-light-gray-color;
         }
     }
     &__text {
-        color: #0A224A;
+        color: $header-dark-blue-color;
         font-family: 'Roboto';
         font-size: 17px;
         font-style: normal;
@@ -86,7 +86,7 @@
     gap: 14px;
     padding: 26px 0 20px 0;
     &__title {
-        color: #0A224A;
+        color: $header-dark-blue-color;
         font-family: 'Roboto';
         font-size: 20px;
         font-style: normal;
@@ -95,7 +95,7 @@
         text-transform: uppercase;
     }
     &__subtitle {
-        color: #0A224A;
+        color: $header-dark-blue-color;
         font-family: 'Roboto';
         font-size: 16px;
         font-style: normal;

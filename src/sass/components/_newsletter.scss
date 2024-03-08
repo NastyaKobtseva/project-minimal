@@ -1,6 +1,6 @@
 @import "../utils/mixins";
 @import "../utils/placeholders";
-
+@import "../utils/variable";
 .newsletter {
     padding: 100px 0 86px 0;
     &__content {
@@ -10,7 +10,7 @@
 }
 .information {
     &__title {
-        color: #0A224A;
+        color: $header-dark-blue-color;
         font-family: 'Roboto';
         font-size: 32px;
         font-style: normal;
@@ -20,7 +20,7 @@
         padding: 0 0 31px 0;
     }
     &__subtitle {
-        color: #0A224A;
+        color: $header-dark-blue-color;
         font-family: 'Roboto';
         font-size: 18px;
         font-style: normal;
@@ -40,8 +40,8 @@
         padding: 11px 20px;
         gap: 8px;
         flex-shrink: 0;
-        border: 1px solid #0A224A;
-        color: #D9D9D9;
+        border: 1px solid $header-dark-blue-color;
+        color: $newsletter-grey-color;
         font-family: 'Roboto';
         font-size: 18px;
         font-style: normal;
@@ -49,19 +49,19 @@
         line-height: 27px;
         transition: transform 0.3s linear, border 0.3s linear;
         &::placeholder {
-            color: #D9D9D9;
+            color: $newsletter-grey-color;
         }
         &:hover {
             transform: translateY(-5px);
         }
         &:focus, &:focus-visible {
             border: none;
-            outline: 2px solid #0A224A;
+            outline: 2px solid $header-dark-blue-color;
         }
         &.focused::placeholder {
             transform: translateY(-15px);
             font-size: 14px;
-            color: #D9D9D9;
+            color: $newsletter-grey-color;
             transition: transform 0.3s, font-size 0.3s, color 0.3s;
         }
     }
@@ -73,8 +73,8 @@
         padding: 11px 20px;
         gap: 8px;
         flex-shrink: 0;
-        border: 1px solid #0A224A;
-        color: #D9D9D9;
+        border: 1px solid $header-dark-blue-color;
+        color: $newsletter-grey-color;
         font-family: 'Roboto';
         font-size: 18px;
         font-style: normal;
@@ -82,26 +82,26 @@
         line-height: 27px;
         transition: transform 0.3s linear, border 0.3s linear;
         &::placeholder {
-            color: #D9D9D9;
+            color: $newsletter-grey-color;
         }
         &:hover {
             transform: translateY(-5px);
         }
         &:focus, &:focus-visible {
             border: none;
-            outline: 2px solid #0A224A;
+            outline: 2px solid $header-dark-blue-color;
         }
         &.focused::placeholder {
             transform: translateY(-15px);
             font-size: 14px;
-            color: #D9D9D9;
+            color: $newsletter-grey-color;
             transition: transform 0.3s, font-size 0.3s, color 0.3s;
         }
     }
     &__button-link {
         padding: 17px 95px;
-        background-color:#0A224A;
-        color: #FFF;
+        background-color:$header-dark-blue-color;
+        color: $header-white-color;
         font-family: 'Roboto';
         font-size: 18px;
         font-style: normal;
@@ -113,14 +113,14 @@
         transition: transform 0.3s linear;
         &:hover {
             transform: scale(1.1);
-            background-color: black;
+            background-color: $modern-black-color;
             &::before {
                 opacity: 1;
             }
         }
         &::before {
             content: '';
-            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            background: linear-gradient(45deg, $newsletter-red-color, $newsletter-orange-color, $newsletter-yellow-color, $newsletter-light-green-color, $newsletter-turquoise-color, $newsletter-blue-color, $newsletter-violet-color, $newsletter-pink-color, $newsletter-red-color);
             position: absolute;
             top: -2px;
             left:-2px;
@@ -167,18 +167,18 @@
         width: 0;
     }
     &__check input:checked ~ .checkmark {
-        background-color: #0A224A;
-        border-color: #0A224A;
+        background-color: $header-dark-blue-color;
+        border-color: $header-dark-blue-color;
       }
       
     &__check input:checked ~ .checkmark::after {
         display: block;
     }
     &__check input:focus ~ .checkmark {
-        box-shadow: 0 0 1px #0A224A;
+        box-shadow: 0 0 1px $header-dark-blue-color;
     }
     &__text {
-        color: #7A7A7A;
+        color: $newsletter-light-gray-color;
         font-family: 'Roboto';
         font-size: 18px;
         font-style: normal;
@@ -188,11 +188,11 @@
 }
 .checkmark {
     position: absolute;
-    top: 0;
+    top: -3px;
     left: 0;
     height: 25px;
     width: 25px;
-    border: 1px solid #212121;
+    border: 1px solid $newsletter-brown-color;
     &:after {
         content: "";
         position: absolute;
@@ -201,7 +201,7 @@
         top: 2px;
         width: 5px;
         height: 13px;
-        border: solid white;
+        border: solid $header-white-color;
         border-width: 0 2px 2px 0;
         transform: rotate(45deg);
     }
